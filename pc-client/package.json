@@ -1,0 +1,15 @@
+{
+  "name": "g-share-screen-pc",
+  "version": "0.1.0",
+  "private": true,
+  "productName": "G享屏",
+  "description": "Windows Electron receiver for G享屏 Android screen sharing.",
+  "main": "src/main.cjs",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "42.4.1",
+    "ws": "8.21.0"
+  }
+}

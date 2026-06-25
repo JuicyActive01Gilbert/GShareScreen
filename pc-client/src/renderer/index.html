@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>G享屏</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="stage">
+        <header class="topbar">
+          <div class="brand">
+            <img src="../../assets/g-share-icon.png" alt="" class="brand-icon" />
+            <h1>G享屏</h1>
+          </div>
+          <div class="top-actions">
+            <span id="videoMeta" class="meta-pill">等待画面</span>
+            <button id="deviceModeButton" type="button" class="mode-button">模拟器模式</button>
+            <button id="windowFullscreenButton" type="button" class="mode-button">窗口全屏</button>
+            <button id="nativeFullscreenButton" type="button" class="mode-button">全屏</button>
+          </div>
+        </header>
+
+        <div id="viewer" class="viewer">
+          <div id="videoFrame" class="video-frame">
+            <video id="remoteVideo" autoplay playsinline muted></video>
+            <img id="usbVideo" class="usb-video" alt="" />
+          </div>
+          <button id="restoreButton" type="button" class="restore-button">恢复</button>
+          <div id="overlayControls" class="overlay-controls">
+            <button id="exitImmersiveButton" type="button" class="restore-button inline">恢复</button>
+            <button id="exitNativeFullscreenButton" type="button" class="restore-button inline">退出全屏</button>
+          </div>
+          <div id="emptyState" class="empty-state">
+            <div class="empty-mark">G</div>
+            <div class="empty-title">等待共享</div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="side-panel">
+        <section class="pairing">
+          <div class="section-title">连接码</div>
+          <div id="pairCode" class="pair-code">------</div>
+          <div id="usbStatus" class="usb-status waiting">
+            <span class="usb-dot"></span>
+            <span id="usbStatusText">等待数据线连接</span>
+          </div>
+          <button id="refreshCodeButton" type="button" class="primary-button">刷新连接码</button>
+        </section>
+
+        <section class="audio-section">
+          <div class="section-title">声音</div>
+          <label class="volume-row">
+            <span id="audioState">80%</span>
+            <input id="volumeSlider" type="range" min="0" max="100" value="80" />
+          </label>
+        </section>
+      </aside>
+    </main>
+    <script src="./renderer.js"></script>
+  </body>
+</html>

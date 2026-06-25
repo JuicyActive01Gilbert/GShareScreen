@@ -1,0 +1,63 @@
+GShareScreen Source and Software License
+
+Copyright (c) 2026 Gilbert
+
+This license applies to the source code, documentation, binaries, and related
+assets in this repository, collectively referred to as the "Software".
+
+1. Permitted Non-Commercial Use
+
+You may freely use, copy, study, modify, compile, run, and redistribute the
+Software for learning, research, evaluation, personal use, and other
+non-commercial purposes.
+
+2. Commercial Use
+
+Commercial use is permitted only if all of the following conditions are met:
+
+- You notify the original author before or when the Software is used in a
+  commercial product, service, project, delivery, integration, or business
+  activity.
+- You clearly acknowledge that this project is based on or derived from
+  GShareScreen.
+- You include a visible source attribution in related documentation, product
+  information, about pages, release notes, or other reasonable materials.
+- You do not remove copyright, license, or attribution notices from the
+  Software.
+
+3. Attribution
+
+When attribution is required, use a reasonable form such as:
+
+Based on GShareScreen by Gilbert:
+https://github.com/JuicyActive01Gilbert/GShareScreen
+
+4. Redistribution
+
+Redistribution of modified or unmodified copies is allowed for non-commercial
+purposes, provided that this license file and attribution notices are retained.
+
+Commercial redistribution is subject to the commercial-use requirements above.
+
+5. No Warranty
+
+The Software is provided "as is", without warranty of any kind, express or
+implied, including but not limited to warranties of merchantability, fitness for
+a particular purpose, and non-infringement.
+
+The author is not liable for any claim, damages, loss, business interruption,
+data loss, device damage, legal risk, or other liability arising from the use,
+modification, distribution, or inability to use the Software.
+
+6. Third-Party Components
+
+This project may depend on third-party libraries, SDKs, tools, or runtimes.
+Those components remain governed by their own licenses. This license does not
+grant rights beyond what those third-party licenses allow.
+
+7. Contact
+
+For commercial-use notification or separate authorization, contact the original
+author through the GitHub repository owner:
+
+https://github.com/JuicyActive01Gilbert
