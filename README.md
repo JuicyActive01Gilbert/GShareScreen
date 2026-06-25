@@ -176,10 +176,11 @@ keytool -genkeypair -v -keystore android-app\keystore\gshare-release.jks -alias 
 
 ## 协议
 
-本项目采用自定义授权协议，详见 [LICENSE](LICENSE)。
+本项目采用 [PolyForm Noncommercial License 1.0.0](LICENSE)。
 
 - 学习、研究、个人使用等非商业用途可以自由使用、修改和分发。
-- 商业用途需要告知原作者，并在产品、文档、关于页面、发行说明或其他合理位置注明源码来源。
+- 商业用途不在该协议授权范围内，需要提前联系原作者获得单独授权。
+- 分发时需要保留 [NOTICE](NOTICE) 中的 `Required Notice`，注明项目来源。
 - 第三方依赖仍受其各自许可证约束。
 
 ## 已知限制
