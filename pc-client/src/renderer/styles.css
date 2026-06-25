@@ -1,0 +1,424 @@
+:root {
+  color-scheme: light;
+  font-family:
+    "Segoe UI",
+    "Microsoft YaHei UI",
+    "Microsoft YaHei",
+    system-ui,
+    sans-serif;
+  background: #f4f6f8;
+  color: #18212b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 900px;
+  min-height: 560px;
+  overflow: hidden;
+  background: #f4f6f8;
+}
+
+button {
+  height: 40px;
+  border: 0;
+  border-radius: 8px;
+  padding: 0 14px;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #12c8c8;
+  outline-offset: 2px;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  height: 100vh;
+}
+
+.stage {
+  display: grid;
+  grid-template-rows: 72px minmax(0, 1fr);
+  min-width: 0;
+  border-right: 1px solid #d8dee6;
+  background: #eef2f5;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 14px 20px;
+  border-bottom: 1px solid #d8dee6;
+  background: #ffffff;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  gap: 12px;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 9px;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(24, 33, 43, 0.16);
+}
+
+h1 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+.meta-pill {
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  border-radius: 999px;
+  padding: 0 12px;
+  background: #f3ecd8;
+  color: #8a5a05;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mode-button,
+.restore-button {
+  background: #18212b;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.mode-button {
+  height: 34px;
+  padding: 0 12px;
+}
+
+.viewer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  background: #101820;
+}
+
+.video-frame {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  background: #101820;
+}
+
+video {
+  display: block;
+  flex: 0 0 auto;
+  width: 0;
+  height: 0;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transform-origin: center center;
+  background: #101820;
+}
+
+.usb-video {
+  display: none;
+  flex: 0 0 auto;
+  width: 0;
+  height: 0;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transform-origin: center center;
+  background: #101820;
+}
+
+.empty-state {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 10px;
+  padding: 24px;
+  text-align: center;
+  background: #101820;
+}
+
+.empty-state.hidden {
+  display: none;
+}
+
+.restore-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 4;
+  display: none;
+  height: 34px;
+  border-radius: 999px;
+  padding: 0 14px;
+  background: rgba(24, 33, 43, 0.86);
+}
+
+.restore-button.inline {
+  position: static;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-controls {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 5;
+  display: none;
+  gap: 8px;
+}
+
+.empty-mark {
+  display: grid;
+  place-items: center;
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  background: #12c8c8;
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.empty-title {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-width: 0;
+  padding: 22px;
+  background: #ffffff;
+}
+
+.section-title {
+  margin-bottom: 10px;
+  color: #617080;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.pair-code {
+  display: grid;
+  place-items: center;
+  height: 86px;
+  border: 1px solid #d8dee6;
+  border-radius: 8px;
+  background: #18212b;
+  color: #f4a62a;
+  font-family: Consolas, "Cascadia Mono", monospace;
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.usb-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  min-height: 32px;
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: #f4f6f8;
+  color: #617080;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.usb-dot {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #9aa5b1;
+}
+
+.usb-status.ready {
+  background: #e8f7f4;
+  color: #08766d;
+}
+
+.usb-status.ready .usb-dot,
+.usb-status.active .usb-dot {
+  background: #0c8c8e;
+}
+
+.usb-status.active {
+  background: #e7f6ff;
+  color: #0b6799;
+}
+
+.usb-status.warning {
+  background: #fff4d7;
+  color: #8a5a05;
+}
+
+.usb-status.warning .usb-dot {
+  background: #f4a62a;
+}
+
+.usb-status.error {
+  background: #ffe8e3;
+  color: #a73822;
+}
+
+.usb-status.error .usb-dot {
+  background: #d84d32;
+}
+
+.primary-button {
+  width: 100%;
+  margin-top: 10px;
+  background: #0c8c8e;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.primary-button:hover {
+  background: #0a7779;
+}
+
+.audio-section {
+  border-top: 1px solid #e6ebf0;
+  padding-top: 20px;
+}
+
+.volume-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 44px;
+  user-select: none;
+  font-size: 14px;
+  color: #18212b;
+}
+
+.volume-row span {
+  min-width: 42px;
+  font-weight: 800;
+}
+
+.volume-row input {
+  flex: 1;
+  accent-color: #0c8c8e;
+}
+
+body.immersive-mode {
+  min-width: 0;
+  min-height: 0;
+  background: #101820;
+}
+
+body.immersive-mode .app-shell {
+  display: block;
+}
+
+body.immersive-mode .stage {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  border-right: 0;
+  background: #101820;
+}
+
+body.immersive-mode .topbar,
+body.immersive-mode .side-panel {
+  display: none;
+}
+
+body.immersive-mode .viewer {
+  width: 100vw;
+  height: 100vh;
+}
+
+body:not(.immersive-mode):not(.device-mode) .viewer {
+  width: 100%;
+  height: 100%;
+}
+
+body.immersive-mode .overlay-controls {
+  display: flex;
+}
+
+body.device-mode {
+  min-width: 0;
+  min-height: 0;
+  background: #101820;
+}
+
+body.device-mode .app-shell {
+  display: block;
+}
+
+body.device-mode .stage {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  border-right: 0;
+  background: #101820;
+}
+
+body.device-mode .topbar,
+body.device-mode .side-panel {
+  display: none;
+}
+
+body.device-mode .viewer {
+  width: 100vw;
+  height: 100vh;
+}
+
+body.device-mode .restore-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.device-mode .overlay-controls {
+  display: none;
+}
